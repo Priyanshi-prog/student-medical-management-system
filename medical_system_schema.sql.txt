@@ -1,0 +1,39 @@
+-- SQL file to create database tables for Student Medical Management System
+
+-- Create table: user_info
+CREATE TABLE user_info (
+    UserName VARCHAR(30),
+    Password CHAR(8) NOT NULL PRIMARY KEY,
+    Designation VARCHAR(10)
+);
+
+-- Create table: student_registration
+CREATE TABLE student_registration (
+    admno VARCHAR(8) NOT NULL,
+    Stud_Name VARCHAR(20),
+    Father_name VARCHAR(20),
+    Mother_name VARCHAR(20),
+    Class VARCHAR(3),
+    Section CHAR(4),
+    Physical_Marks VARCHAR(100),
+    Address VARCHAR(200),
+    Contact_no BIGINT NOT NULL PRIMARY KEY,
+    Email_id VARCHAR(50),
+    Gender CHAR(2),
+    DOB DATE,
+    Blood_group VARCHAR(5),
+    Height INT,
+    Weight INT,
+    BMI FLOAT,
+    Pre_existing_illness VARCHAR(20),
+    Drug_allergy VARCHAR(20)
+);
+
+-- Create table: stock
+CREATE TABLE stock (
+    BatchNo VARCHAR(10) NOT NULL PRIMARY KEY,
+    Med_Name VARCHAR(20),
+    Total_med INT,
+    Qty_issued INT,
+    remaining_med INT
+);
